@@ -1,0 +1,26 @@
+import { Injectable } from '@angular/core';
+{{#apiInfo}}
+{{#apis}}
+{{#operations}}
+import { {{ classname }}URIs } from './{{apiPackage}}/{{ classFilename }}';
+{{/operations}}
+{{/apis}}
+
+{{^providedInRoot}}
+@Injectable()
+{{/providedInRoot}}
+{{#providedInRoot}}
+@Injectable({
+  providedIn: 'root'
+})
+{{/providedInRoot}}
+export class {{modelPackage}}URIs {
+    constructor(protected endpoint: string) { }
+
+{{#apis}}
+{{#operations}}
+    {{ classname }} = new {{ classname }}URIs(this.endpoint);
+{{/operations}}
+{{/apis}}
+{{/apiInfo}}
+}

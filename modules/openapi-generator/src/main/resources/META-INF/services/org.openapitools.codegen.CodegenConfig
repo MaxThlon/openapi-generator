@@ -100,6 +100,7 @@ org.openapitools.codegen.languages.SwiftClientCodegen
 org.openapitools.codegen.languages.Swift3Codegen
 org.openapitools.codegen.languages.Swift4Codegen
 org.openapitools.codegen.languages.TypeScriptAngularClientCodegen
+org.openapitools.codegen.languages.TypeScriptAngularUriCodegen
 org.openapitools.codegen.languages.TypeScriptAngularJsClientCodegen
 org.openapitools.codegen.languages.TypeScriptAureliaClientCodegen
 org.openapitools.codegen.languages.TypeScriptAxiosClientCodegen

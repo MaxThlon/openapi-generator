@@ -1,0 +1,18 @@
+import { UUID as uuid } from 'angular2-uuid';
+
+{{#operations}}
+{{#description}}
+/**
+ * {{&description}}
+ */
+{{/description}}
+export class {{classname}}URIs {
+  constructor(protected endpoint: string) { }
+
+{{#operation}}
+  public {{nickname}}({{#pathParams}}{{paramName}}{{^required}}?{{/required}}: {{#dataFormat}}{{{dataFormat}}}{{/dataFormat}}{{^dataFormat}}{{{dataType}}}{{/dataFormat}}{{/pathParams}}): string {
+    return `${this.endpoint}{{{path}}}`;
+  }
+{{/operation}}
+}
+{{/operations}}
